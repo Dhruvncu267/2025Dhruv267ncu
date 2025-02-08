@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+void replaceVowels(string &str) {
+    for (char &ch : str) {
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+            ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+            ch = '*';
+        }
+    }
+}
+
+int main() {
+    string str;
+    cout << "Enter a string: ";
+    getline(cin, str);
+
+    replaceVowels(str);
+    
+    cout << "Modified string: " << str << endl;
+    return 0;
+}
