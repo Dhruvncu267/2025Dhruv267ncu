@@ -1,4 +1,4 @@
-#include<iostream>
+#include<iostream>  //check wether its prime or not if yes then find factors.
 using namespace std;
 
 int main() {
