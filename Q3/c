@@ -1,0 +1,19 @@
+#include <iostream> /*used chagpt but also i undersatnd it */
+using namespace std;
+
+int main() {
+    string str;
+ int freq[26] = {0}; /*to create an array freq and store 26 elements and intialize each element with 0*/
+
+    cout << "Enter a string: ";
+    getline(cin, str);
+
+    for (char ch : str) //runs for each element in array 
+        freq[ch - 'a']++;  //freq[index number]inc it by 1
+
+    for (int i = 0; i < 26; i++) 
+        if (freq[i] > 0) // if frequency of index number is more than 0  
+            cout << char(i + 'a') << " -> " << freq[i] << endl;
+
+    return 0;
+}
