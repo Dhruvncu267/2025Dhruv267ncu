@@ -1,0 +1,36 @@
+#include <iostream>  // program to check if a number is prime and find the next prime number greater than n
+using namespace std;
+
+// Function to check if a number is prime
+bool isPrime(int num) {
+    if (num < 2) return false;
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0)
+            return false;
+    }
+    return true;
+}
+
+// Function to find the next prime number greater than n
+int nextPrime(int n) {
+    int next = n + 1;
+    while (!isPrime(next)) {
+        next++;
+    }
+    return next;
+}
+
+int main() {
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    if (isPrime(n)) {
+        cout << n << " is a prime number.\n";
+        cout << "The next prime number is " << nextPrime(n) << endl;
+    } else {
+        cout << n << " is not a prime number.\n";
+    }
+
+    return 0;
+}
